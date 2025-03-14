@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+# DOE Tech Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A technology marketplace for the Department of Energy OCIO, built with React, TypeScript, and Tailwind CSS. This website allows users to self-serve and request technology products, software services, technical configuration help, and ask general questions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Amazon-like storefront design
+- Product catalog with detailed product pages
+- Focus on data visualization tools (Tableau, PowerBI, sPARC)
+- AI chatbot to help users identify appropriate visualization tools
+- Request form for services
+- Responsive design for all device sizes
 
-### `npm start`
+## Demo Script
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A demo script is included in the `demo-script.md` file, which demonstrates a scripted scenario of a user interacting with the AI chatbot to identify the appropriate visualization tool.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React 19
+- TypeScript
+- Tailwind CSS
+- React Router
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/doe-tech-marketplace.git
+cd doe-tech-marketplace
+```
 
-### `npm run eject`
+2. Install dependencies
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Start the development server
+```bash
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open your browser and navigate to `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project Structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+doe-tech-marketplace/
+├── public/                 # Static files
+├── src/                    # Source files
+│   ├── components/         # Reusable components
+│   │   ├── Chatbot.tsx     # AI chatbot component
+│   │   ├── ChatbotButton.tsx # Button to toggle chatbot
+│   │   ├── Footer.tsx      # Footer component
+│   │   ├── Header.tsx      # Header component
+│   │   ├── Layout.tsx      # Layout wrapper
+│   │   └── ProductCard.tsx # Product card component
+│   ├── pages/              # Page components
+│   │   ├── Home.tsx        # Home page
+│   │   ├── NotFound.tsx    # 404 page
+│   │   ├── ProductDetail.tsx # Product detail page
+│   │   ├── Products.tsx    # Products listing page
+│   │   └── RequestForm.tsx # Service request form
+│   ├── App.tsx             # Main App component with routing
+│   └── index.tsx           # Entry point
+├── demo-script.md          # Chatbot demo script
+├── package.json            # Dependencies and scripts
+├── tailwind.config.js      # Tailwind CSS configuration
+└── tsconfig.json           # TypeScript configuration
+```
 
-## Learn More
+## Building for Production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To build the application for production, run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
+
+This will create a `build` directory with optimized production files.
+
+## Future Enhancements
+
+- User authentication and profiles
+- Admin dashboard for managing product catalog
+- Integration with backend services for real request processing
+- Enhanced AI chatbot capabilities
+- More product categories beyond data visualization
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
